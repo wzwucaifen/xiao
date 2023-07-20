@@ -1,0 +1,21 @@
+import fastifyAuth0 from 'fastify-auth0-verify';
+import Fastify, {
+  FastifyBaseLogger,
+  FastifyHttpOptions,
+  FastifyInstance,
+  RawReplyDefaultExpression,
+  RawRequestDefaultExpression,
+  RawServerDefault
+} from 'fastify';
+import Ajv from 'ajv';
+import middie from '@fastify/middie';
+import fastifySession from '@fastify/session';
+import fastifyCookie from '@fastify/cookie';
+import MongoStore from 'connect-mongo';
+import type { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
+import fastifySwagger from '@fastify/swagger';
+import fastifySwaggerUI from '@fastify/swagger-ui';
+import fastifyCsrfProtection from '@fastify/csrf-protection';
+import fastifySentry from '@immobiliarelabs/fastify-sentry';
+import uriResolver from 'fast-uri';
+import addFormats from 'ajv-formats';
